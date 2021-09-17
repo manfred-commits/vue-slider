@@ -33,6 +33,9 @@ var app = new Vue({
                 this.imagesIndex= this.images.length-1;
 
             }
+        },
+        bulletChange: function(num){
+            console.log(num);
         }
     }
 

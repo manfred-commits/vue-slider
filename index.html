@@ -30,7 +30,7 @@
                 <div class="img-container">
                     <img :src="images[imagesIndex]" alt="image album">
                     <div class="btn-sliders">
-                        <i v-for="(image,i) in images" class="fas fa-circle" :class="imagesIndex == i ? 'selected':'' "></i>
+                        <i v-for="(image,i) in images" class="fas fa-circle" :class="imagesIndex == i ? 'selected':'' " @click="bulletChange(i)"></i>
                     </div>
                 </div>
                 <div @click="counterUp()" class="right-arrow">
