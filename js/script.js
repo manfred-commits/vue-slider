@@ -21,6 +21,15 @@ const app = new Vue({
                 this.imagesIndex= 0;
 
             } 
+        },
+        counterDown: function( ){
+            this.imagesIndex--;
+
+            if(this.imagesIndex < 0){
+
+                this.imagesIndex= this.images.length-1;
+
+            }
         }
     },
     mounted:{
