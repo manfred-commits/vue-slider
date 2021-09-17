@@ -26,13 +26,11 @@
 
                 <div @click="counterDown()" class="left-arrow">
                     <i class="fas fa-caret-left"></i>
-                </Div>
+                </div>
                 <div class="img-container">
                     <img :src="images[imagesIndex]" alt="image album">
                     <div class="btn-sliders">
-                        <i class="fas fa-circle selected"></i>
-                        <i class="fas fa-circle"></i>
-                        <i class="fas fa-circle"></i>
+                        <i v-for="(image,i) in images" class="fas fa-circle" :class="imagesIndex == i ? 'selected':'' "></i>
                     </div>
                 </div>
                 <div @click="counterUp()" class="right-arrow">

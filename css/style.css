@@ -86,10 +86,11 @@ body{
     padding: 5px;
     border-radius: 15px;
     box-shadow: -1px 4px 3px 4px rgba(0, 0, 0, 0.2);
+    color: rgb(255, 255, 255);
 
 }
-.btn-sliders{
-    color: rgb(255, 255, 255);
+.btn-sliders i{
+    padding: 5px;
 }
 
 /* /carosel formatting */
