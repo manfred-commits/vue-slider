@@ -41,7 +41,14 @@ var app = new Vue({
 
             autoplay = setInterval( ()=> {
                 this.imagesIndex++;
-                console.log(this.imagesIndex)
+                console.log(this.imagesIndex);
+                if(this.imagesIndex >= this.images.length){
+
+                    this.imagesIndex= 0;
+    
+                } 
+                console.log(this.imagesIndex);
+
           }, 3000);
          },
           
