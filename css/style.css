@@ -97,3 +97,11 @@ body{
 
 
 /* /main page formatting */
+
+
+@media (min-width: 375px) { 
+
+    .img-container{
+        height: 80%;
+    }
+}
