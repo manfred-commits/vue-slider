@@ -11,8 +11,8 @@ var app = new Vue({
         imagesIndex:0,
 
     },
-    mounted(){ 
-
+    mounted:function(){ 
+        this.slideInterval()
     },
     methods: {
         counterUp: function() {
@@ -36,8 +36,18 @@ var app = new Vue({
         },
         bulletChange: function(num){
             this.imagesIndex=num;
-        }
-    }
+        },
+        slideInterval: function () {
+
+            autoplay = setInterval( ()=> {
+                this.imagesIndex++;
+                console.log(this.imagesIndex)
+          }, 3000);
+         },
+          
+        
+    }      
+    
 
 
 });
