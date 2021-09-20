@@ -52,7 +52,9 @@ var app = new Vue({
           }, 3000);
          },
         stopInterval: function() {
-            clearInterval(autoplay);
+            if(this.autoplay != null){
+                clearInterval(autoplay);
+            }
         }
         
     }      
