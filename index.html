@@ -22,7 +22,7 @@
     </head>
     <body>
         <section class="page-container">
-            <div id="root" @click="stopInterval" class="container-carosel">
+            <div id="root" @mouseover="stopInterval" @mouseleave="restartInterval" class="container-carosel">
 
                 <div @click="counterDown()" class="left-arrow">
                     <i class="fas fa-caret-left"></i>

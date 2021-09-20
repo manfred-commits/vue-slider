@@ -9,10 +9,10 @@ var app = new Vue({
     data:{
         images:["https://upload.wikimedia.org/wikipedia/commons/5/58/Sunset_2007-1.jpg", "https://i.redd.it/nwxarpze09o21.jpg","https://images.wallpaperscraft.com/image/single/new_york_night_city_skyline_121546_3840x2160.jpg"],
         imagesIndex:0,
-        autoplay:null
+        autoplay:null,
     },
     mounted:function(){ 
-        this.slideInterval()
+        this.restartInterval();
     },
     methods: {
         counterUp: function() {
@@ -37,23 +37,15 @@ var app = new Vue({
         bulletChange: function(num){
             this.imagesIndex=num;
         },
-        slideInterval: function () {
-
-            autoplay = setInterval( ()=> {
-                this.imagesIndex++;
-                console.log(this.imagesIndex);
-                if(this.imagesIndex >= this.images.length){
-
-                    this.imagesIndex= 0;
-    
-                } 
-                console.log(this.imagesIndex);
-
-          }, 3000);
-         },
+        startAutoplay: function(){
+            this.autoplay=setInterval(this.counterUp, 3000); 
+        },
+        restartInterval: function(){
+            this.autoplay=setInterval(this.counterUp,3000);
+        },
         stopInterval: function() {
             if(this.autoplay != null){
-                clearInterval(autoplay);
+                clearInterval(this.autoplay);
             }
         }
         
